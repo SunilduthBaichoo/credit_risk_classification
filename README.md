@@ -167,9 +167,15 @@ Summarizing the results of the machine learning model and recommendations:
 - **Which model performs best?**  Logistic Regression Model with the Original Data after applying SMOTE has slightly better performance and is therefore recomended.
 - **Does performance depend on the problem we are trying to solve?** Yes, if detecting high-risk loans is more important, we may need to optimize recall and handle class imbalance better.
 
-### **Key Takeaways:**
-- The model is highly accurate overall, but class imbalance skews the results. Since most loans are healthy (0), the high accuracy is largely due to correct predictions in that class.
-- High-risk loans (1) are detected well, but the **precision (0.87) could be improved** to reduce false positives.
+
+**Reomendation :** The model with SMOTE is therefore recomended for the following justifications: 
+- The model is performing exceptionally well for healthy loans, as expected.  
+- The model now detects more high-risk loans (higher recall) and maintains a good balance between correctly identifying and misclassifying them. 
+- Applying SMOTE significantly improved the recall for high-risk loans (0.93 → 0.94). 
+- Precision slightly dropped from 0.85 to 0.88, meaning more healthy loans might be misclassified as high-risk, but the trade-off is acceptable in risk analysis. 
+- The model is now less biased toward the majority class and is better at detecting high-risk loans. 
+- SMOTE improved recall for high-risk loans while maintaining strong overall accuracy.
+- The model is now more balanced and effective for both classes.
 
 ### **Potential Improvements:**
 - Adjust decision thresholds to balance precision and recall.
